@@ -279,7 +279,9 @@ select {
 }
 
 .underline-indicators > * {
+  cursor: pointer;
   padding: var(--underline-gap, 1rem) 0;
+  border: 0;
   border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
 }
 
@@ -290,4 +292,7 @@ select {
 
 .underline-indicators > .active {
   border-color: hsl(var(--clr-white) / 1);
+}
+
+.tab-list {
 }
