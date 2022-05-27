@@ -151,10 +151,10 @@ select {
 }
 
 .text-dark {
-  color: hsl(var(--clr-white));
+  color: hsl(var(--clr-dark));
 }
 .text-accent {
-  color: hsl(var(--clr-white));
+  color: hsl(var(--clr-light));
 }
 .text-white {
   color: hsl(var(--clr-white));
@@ -237,7 +237,7 @@ select {
 // aspect-ratio helps to give height and width size (for example aspect-ratio 1 equals to square)
 .large-button {
   position: relative;
-  display: grid;
+  display: inline-grid;
   z-index: 1;
   place-items: center;
   padding: 0 2em;

@@ -52,7 +52,7 @@ function App() {
           experience!
         </p>
         <a
-          href="#"
+          href="destination.html"
           className="large-button uppercase ff-serif fs-600 text-dark bg-white"
         >
           Explore
