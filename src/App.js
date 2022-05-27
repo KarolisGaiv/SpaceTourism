@@ -4,7 +4,7 @@ import logo from "./assets/shared/logo.svg";
 function App() {
   return (
     <div>
-      <header className="primary-header">
+      <header className="primary-header flex">
         <div>
           <img src={logo} alt="space tourism logo" className="logo" />
         </div>
@@ -12,7 +12,7 @@ function App() {
           <ul className="primary-navigation underline-indicators flex">
             <li className="active">
               <a
-                className="uppercase text-white letter-spacing-2"
+                className="ff-sans-cond uppercase text-white letter-spacing-2"
                 href="index.html"
               >
                 <span>01</span>Home
@@ -20,7 +20,7 @@ function App() {
             </li>
             <li>
               <a
-                className="uppercase text-white letter-spacing-2"
+                className="ff-sans-cond uppercase text-white letter-spacing-2"
                 href="destination.html"
               >
                 <span>02</span>Destination
@@ -28,7 +28,7 @@ function App() {
             </li>
             <li>
               <a
-                className="uppercase text-white letter-spacing-2"
+                className="ff-sans-cond uppercase text-white letter-spacing-2"
                 href="technology.html"
               >
                 <span>03</span>Technology
@@ -37,11 +37,27 @@ function App() {
           </ul>
         </nav>
       </header>
-      00 Home 01 Destination 02 Crew 03 Technology So, you want to travel to
-      Space Let’s face it; if you want to go to space, you might as well
-      genuinely go to outer space and not hover kind of on the edge of it. Well
-      sit back, and relax because we’ll give you a truly out of this world
-      experience! Explore
+      <div className="container">
+        <h1 className="text-accent fs-500 ff-sans-cond uppercase">
+          So, you want to travel to
+          <span className="fs-900 ff-serif text-white letter-spacing-1">
+            {" "}
+            Space
+          </span>
+        </h1>
+        <p>
+          Let’s face it; if you want to go to space, you might as well genuinely
+          go to outer space and not hover kind of on the edge of it. Well sit
+          back, and relax because we’ll give you a truly out of this world
+          experience!
+        </p>
+        <a
+          href="#"
+          className="large-button uppercase ff-serif fs-600 text-dark bg-white"
+        >
+          Explore
+        </a>
+      </div>
     </div>
   );
 }
