@@ -1,10 +1,13 @@
 import "./styles/main.scss";
+import logo from "./assets/shared/logo.svg";
 
 function App() {
   return (
     <div>
       <header className="primary-header">
-        <div></div>
+        <div>
+          <img src={logo} alt="space tourism logo" className="logo" />
+        </div>
         <nav>
           <ul className="primary-navigation underline-indicators flex">
             <li className="active">
