@@ -155,10 +155,18 @@ select {
 .grid-container {
     border: 5px solid limegreen;
     display: grid;
+    text-align: center;
+    place-items: center;
+}
+
+/* ch - character limit - to limit the width of text */
+.grid-container * {
+    max-width: 50ch;
 }
 
 @media (min-width: 45em) {
     .grid-container {
+        text-align: left;
         column-gap: var(--container-gap, 2rem);
         grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
     }
@@ -244,6 +252,7 @@ select {
 /* ------------------- */
  /* aspect-ratio helps to give height and width size (for example aspect-ratio 1 equals to square) */
 .large-button {
+    font-size: 2rem;
     position: relative;
     z-index: 1;
     display: inline-grid;
