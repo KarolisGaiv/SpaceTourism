@@ -137,6 +137,10 @@ select {
     gap: var(--gap, 1rem);
 }
 
+.d-block {
+    display: block;
+}
+
 /* everything but not the first child (:where does not add specificity) */
 .flow > *:where(:not(:first-child)) {
     margin-top: var(--flow-space, 1rem);
@@ -169,8 +173,6 @@ select {
         outline: 1px solid yellow;
     }
 }
-
-
 
 
 .sr-only {
