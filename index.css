@@ -137,6 +137,7 @@ select {
     gap: var(--gap, 1rem);
 }
 
+/* everything but not the first child (:where does not add specificity) */
 .flow > *:where(:not(:first-child)) {
     margin-top: var(--flow-space, 1rem);
 }
@@ -239,7 +240,7 @@ select {
 /* ------------------- */
 /* Compontents         */
 /* ------------------- */
-
+ /* aspect-ratio helps to give height and width size (for example aspect-ratio 1 equals to square) */
 .large-button {
     position: relative;
     z-index: 1;
