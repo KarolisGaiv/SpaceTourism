@@ -342,3 +342,13 @@ select {
 .dot-indicators > [aria-selected="true"] {
     background-color: hsl( var(--clr-white) / 1); 
 }
+
+/* Page specific */
+
+/* home */
+
+.home {
+    background-size: cover;
+    background-position: bottom center;
+    background-image: url(./assets/home/background-home-mobile.jpg);
+}
