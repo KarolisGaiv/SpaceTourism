@@ -343,12 +343,19 @@ select {
     background-color: hsl( var(--clr-white) / 1); 
 }
 
-/* Page specific */
-
-/* home */
-
-.home {
+/* Page specific background*/
+body {
     background-size: cover;
     background-position: bottom center;
+}
+
+/* home */
+.home {
     background-image: url(./assets/home/background-home-mobile.jpg);
+}
+
+@media (min-width: 35rem) {
+    .home {
+        background-image: url(./assets/home/background-home-tablet.jpg);
+    }
 }
