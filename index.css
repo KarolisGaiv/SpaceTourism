@@ -359,3 +359,9 @@ body {
         background-image: url(./assets/home/background-home-tablet.jpg);
     }
 }
+
+@media (min-width: 45rem) {
+    .home {
+        background-image: url(./assets/home/background-home-desktop.jpg);
+    }
+}
