@@ -285,15 +285,24 @@ select {
 }
 
 .primary-navigation {
-    inset: 0 0 0 20%;
-    position: fixed;
-    z-index: 1000;
-    background: black;
     --underline-gap: 2rem;
     list-style: none;
-    padding: min(20rem, 10vh) 2rem;
+    padding: 0;
     margin: 0;
-    flex-direction: column;
+}
+
+@media (max-width: 35rem) {
+    .primary-navigation {
+        inset: 0 0 0 30%;
+        position: fixed;
+        z-index: 1000;
+        background: black;
+        --underline-gap: 2rem;
+        list-style: none;
+        padding: min(20rem, 15vh) 2rem;
+        margin: 0;
+        flex-direction: column;
+    }
 }
 
 .primary-navigation a {
