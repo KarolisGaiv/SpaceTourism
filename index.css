@@ -287,10 +287,11 @@ select {
 .primary-navigation {
     inset: 0 0 0 20%;
     position: fixed;
-    background: lightgreen;
+    z-index: 1000;
+    background: black;
     --underline-gap: 2rem;
     list-style: none;
-    padding: 0;
+    padding: min(20rem, 10vh) 2rem;
     margin: 0;
     flex-direction: column;
 }
