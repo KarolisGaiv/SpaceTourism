@@ -285,11 +285,14 @@ select {
 }
 
 .primary-navigation {
-    --gap: 8rem;
+    inset: 0 0 0 20%;
+    position: fixed;
+    background: lightgreen;
     --underline-gap: 2rem;
     list-style: none;
     padding: 0;
     margin: 0;
+    flex-direction: column;
 }
 
 .primary-navigation a {
