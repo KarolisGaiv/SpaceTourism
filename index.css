@@ -297,11 +297,15 @@ select {
         position: fixed;
         z-index: 1000;
         background: black;
-        --underline-gap: 2rem;
+        --underline-gap: 0.5rem;
         list-style: none;
         padding: min(20rem, 15vh) 2rem;
         margin: 0;
         flex-direction: column;
+    }
+
+    .primary-nagivation.underline-indicators > .active{
+        border: 0;
     }
 }
 
