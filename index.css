@@ -286,6 +286,11 @@ select {
     transform: scale(1.5);
 }
 
+/* clamp sets minimum, standard and max values */
+.logo {
+    margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+}
+
 .primary-navigation {
     --underline-gap: 2rem;
     list-style: none;
