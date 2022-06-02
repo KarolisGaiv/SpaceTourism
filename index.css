@@ -343,6 +343,10 @@ select {
         width: 1.5rem;
         aspect-ratio: 1;
     }
+
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background-image: url(./assets/shared/icon-close.svg);
+    }
 }
 
 .primary-navigation a {
