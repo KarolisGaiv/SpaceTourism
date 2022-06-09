@@ -156,38 +156,6 @@ select {
     max-width: 80rem;
 }
 
-.grid-container {
-    display: grid;
-    text-align: center;
-    place-items: center;
-    padding-inline: 1rem;
-}
-
-/* ch - character limit - to limit the width of text */
-.grid-container * {
-    max-width: 50ch;
-}
-
-@media (min-width: 45em) {
-    .grid-container {
-        text-align: left;
-        column-gap: var(--container-gap, 2rem);
-        grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
-    }
-    
-    .grid-container > *:first-child {
-        grid-column: 2;
-    }
-
-    .grid-container > *:last-child {
-        grid-column: 3;
-    }
-
-    .grid-container--home {
-        padding-bottom: max(6rem, 20vh);
-        align-items: end;
-    }
-}
 
 
 .sr-only {
@@ -484,5 +452,76 @@ body {
 @media (min-width: 45rem) {
     .home {
         background-image: url(./assets/home/background-home-desktop.jpg);
+    }
+}
+
+/* ----------------------------- */
+/* Layout     */
+/* ----------------------------- */
+
+.grid-container {
+    display: grid;
+    text-align: center;
+    place-items: center;
+    padding-inline: 1rem;
+}
+
+/* ch - character limit - to limit the width of text */
+.grid-container * {
+    max-width: 50ch;
+}
+
+.numbered-title {
+    grid-area: title;
+}
+
+/* destination layout */
+
+.grid-container--destination {
+    grid-template-areas: 
+        "title"
+        "image"
+        "tabs"
+        "content"
+    ;
+}
+
+.grid-container--destination > img {
+    grid-area: image;
+    max-width: 60%;
+}
+
+.grid-container--destination > .tab-list {
+    grid-area: tabs;
+}
+
+.grid-container--destination > .destination-info {
+    grid-area: content;
+}
+
+.destination-meta {
+    flex-direction: column;
+    border-top: 1px solid hsl( var(--clr-white) / .25);
+}
+
+
+@media (min-width: 45em) {
+    .grid-container {
+        text-align: left;
+        column-gap: var(--container-gap, 2rem);
+        grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
+    }
+    
+    .grid-container > *:first-child {
+        grid-column: 2;
+    }
+
+    .grid-container > *:last-child {
+        grid-column: 3;
+    }
+
+    .grid-container--home {
+        padding-bottom: max(6rem, 20vh);
+        align-items: end;
     }
 }
