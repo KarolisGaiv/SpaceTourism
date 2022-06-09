@@ -540,4 +540,11 @@ body {
         padding-bottom: max(6rem, 20vh);
         align-items: end;
     }
+
+    .grid-container--destination {
+        grid-template-areas: 
+            '. title title .'
+            '. image tabs .'
+            '. image content .'
+    }
 }
