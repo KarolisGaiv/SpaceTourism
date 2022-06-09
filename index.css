@@ -464,6 +464,7 @@ body {
     text-align: center;
     place-items: center;
     padding-inline: 1rem;
+    padding-bottom: 4rem;
 }
 
 /* ch - character limit - to limit the width of text */
@@ -505,6 +506,13 @@ body {
     border-top: 1px solid hsl( var(--clr-white) / .1);
     padding-top: 2.5rem;
     margin-top: 2.5rem;
+}
+
+@media (min-width: 35em) {
+    .numbered-title {
+        justify-self: start;
+        margin-top: 2rem;
+    }
 }
 
 
