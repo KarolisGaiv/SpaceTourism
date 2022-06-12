@@ -609,6 +609,8 @@ body {
             'tabs'
             'image';
     }
+
+
 }
 
 @media (min-width: 45em) {
@@ -647,6 +649,13 @@ body {
     .destination-meta {
         --gap: min(6vw, 6rem);
         justify-content: start;
+    }
+
+    .grid-container--crew {
+        grid-template-areas: 
+            '. title title .'
+            '. content image .'
+            '. tabs image .'
     }
 
 }
