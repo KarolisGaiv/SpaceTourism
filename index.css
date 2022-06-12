@@ -468,7 +468,8 @@ body {
 }
 
 /* ch - character limit - to limit the width of text */
-.grid-container * {
+/* selects anything that does not have a class*/
+.grid-container p:not([class]) {
     max-width: 50ch;
 }
 
@@ -547,6 +548,7 @@ body {
 
     .grid-container--destination {
         justify-items: start;
+        align-content: start;
         grid-template-areas: 
             '. title title .'
             '. image tabs .'
