@@ -555,7 +555,8 @@ body {
             '. image content .'
     }
 
-    .grid-container--destination > img {
+    .grid-container--destination > img,
+    .grid-container--crew > img {
         max-width: 90%;
     }
 
@@ -583,7 +584,7 @@ body {
     border-bottom: 1px solid hsl( var(--clr-white) / .1);
 }
  
-.grid-container--crew > .dot-list {
+.grid-container--crew > .dot-indicators {
     grid-area: tabs;
 }
 
