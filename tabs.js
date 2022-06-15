@@ -14,10 +14,16 @@ tabList.addEventListener('keydown', (e) => {
 
     if (e.keyCode === keydownRight) {
         tabFocus++;
+        if (tabFocus >= tabs.length) {
+            tabFocus = 0;
+        }
     }
 
     if (e.keyCode === keydownLeft) {
         tabFocus--;
+        if (tabFocus < 0) {
+            tabFocus = tabs.length -1
+        }
     }
 
     tabs[tabFocus].setAttribute("tabindex", 0);
