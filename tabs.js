@@ -39,5 +39,5 @@ function changeTabFocus(e) {
 }
 
 function changeTabPanel(e) {
-    const targetBtn = e.target
+    const targetTab = e.target
 }
