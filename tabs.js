@@ -40,4 +40,13 @@ function changeTabFocus(e) {
 
 function changeTabPanel(e) {
     const targetTab = e.target
+    const targetPanel = targetTab.getAttribute("aria-controls")
+
+    const tabContainer = targetTab.parentNode
+    const mainContainer = tabContainer.parentNode
+
+    mainContainer.querySelector([`#${targetPanel}`]).removeAttribute("hidden")
+
+    console.log(mainContainer);
+
 }
