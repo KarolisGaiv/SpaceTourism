@@ -1,9 +1,14 @@
 const tabList = document.querySelector('[role="tablist"]');
 const tabs = tabList.querySelectorAll('[role="tab"]');
 
-
-
 tabList.addEventListener('keydown', changeTabFocus)
+
+tabs.forEach((tab) => {
+    tab.addEventListener("click", changeTabPanel)
+})
+
+
+
 
 let tabFocus = 0;
 function changeTabFocus(e) {
@@ -31,4 +36,8 @@ function changeTabFocus(e) {
 
     tabs[tabFocus].setAttribute("tabindex", 0);
     tabs[tabFocus].focus();
+}
+
+function changeTabPanel(e) {
+    const targetBtn = e.target
 }
