@@ -46,6 +46,8 @@ function changeTabPanel(e) {
     const tabContainer = targetTab.parentNode
     const mainContainer = tabContainer.parentNode
 
+    tabContainer.querySelector(`[aria-selected="true"]`).setAttribute("aria-selected", false)
+
     // change planet content
     mainContainer.querySelectorAll(`[role="tabpanel"]`).forEach((panel) => panel.setAttribute("hidden", true))
 
