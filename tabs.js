@@ -51,7 +51,7 @@ function changeTabPanel(e) {
     targetTab.setAttribute("aria-selected", true)
 
     // change planet content
-    mainContainer.querySelectorAll(`[role="tabpanel"]`).forEach((panel) => panel.setAttribute("hidden", true))
+    hideContent(mainContainer, `[role="tabpanel"]`)
 
     mainContainer.querySelector([`#${targetPanel}`]).removeAttribute("hidden")
 
@@ -60,3 +60,11 @@ function changeTabPanel(e) {
 
     mainContainer.querySelector([`#${targetImage}`]).removeAttribute("hidden")
 }
+
+function hideContent(parent, content) {
+    parent
+    .querySelectorAll(content)
+    .forEach((item) => item.setAttribute("hidden", true));
+}
+
+function showContent() {}
