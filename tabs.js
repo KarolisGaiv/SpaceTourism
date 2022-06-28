@@ -52,13 +52,11 @@ function changeTabPanel(e) {
 
     // change planet content
     hideContent(mainContainer, `[role="tabpanel"]`)
-
-    mainContainer.querySelector([`#${targetPanel}`]).removeAttribute("hidden")
+    showContent(mainContainer, [`#${targetPanel}`])
 
     // change planet image
-    mainContainer.querySelectorAll(`picture`).forEach((picture) => picture.setAttribute("hidden", true))
-
-    mainContainer.querySelector([`#${targetImage}`]).removeAttribute("hidden")
+    hideContent(mainContainer, "picture")
+    showContent(mainContainer, [`#${targetImage}`])
 }
 
 function hideContent(parent, content) {
@@ -67,4 +65,6 @@ function hideContent(parent, content) {
     .forEach((item) => item.setAttribute("hidden", true));
 }
 
-function showContent() {}
+function showContent(parent, content) {
+    parent.querySelector(content).removeAttribute("hidden")
+}
