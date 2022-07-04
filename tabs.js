@@ -24,9 +24,7 @@ function changeTabFocus(e) {
             if (tabFocus >= tabs.length) {
                 tabFocus = 0;
             }
-        }
-    
-        if (e.keyCode === keydownLeft) {
+        } else if (e.keyCode === keydownLeft) {
             tabFocus--;
             if (tabFocus < 0) {
                 tabFocus = tabs.length -1
